@@ -1,0 +1,698 @@
+
+# 2025-11-27 11:15:26.563270
++Code the following app
++```
++✅ FULL DETAILED PROMPT — OJT HOURS LOGGING APP
++
++Title: OJT Hours Logging & Monitoring App
++
++Goal:
++Create a mobile-friendly mini app that allows students to log daily OJT hours, monitor progress, generate reports, and get supervisor verification digitally.
++
++
++---
++
++📌 App Description
++
++Build an OJT Hours Logging App for students. The app should allow each trainee to record their date, time in, time out, tasks accomplished, and total hours. It must automatically calculate cumulative hours and display progress toward required OJT hours. Supervisors should be able to verify entries.
++
++
++---
++
++📌 Users & Access Levels
++
++1. Student / Trainee
++
++Can log hours
++
++Can edit own logs
++
++Can view total hours and progress
++
++Can generate a report
++
++
++
++2. Supervisor / HR
++
++Can view trainee logs
++
++Can approve or reject entries
++
++Can comment on logs
++
++
++
++3. Admin (optional)
++
++Manages users
++
++Sets required total OJT hours (ex: 300 hrs / 486 hrs)
++
++
++
++
++
++---
++
++📌 Required Features
++
++1. Student Hours Logging
++
++Form fields:
++
++Date
++
++Time In
++
++Time Out
++
++Auto-calculate total hours
++
++Task details / Work summary
++
++Upload proof (optional: photo, file, screenshot)
++
++Select Supervisor for verification
++
++
++Each entry should be saved under the student’s account.
++
++
++
++---
++
++2. Automatic Hours Calculation
++
++Compute (Time Out – Time In)
++
++Add to cumulative total
++
++Display:
++
++Total hours completed
++
++Hours remaining
++
++Progress bar (%)
++
++
++
++
++---
++
++3. Supervisor Approval
++
++Every log should have a status:
++
++Pending
++
++Approved
++
++Rejected
++
++
++Supervisor actions:
++
++Approve or reject entry
++
++Add comments
++
++Approve multiple entries at once (optional)
++
++
++
++---
++
++4. Dashboard
++
++For Students
++
++Total hours completed
++
++Remaining hours
++
++Weekly hours summary
++
++Monthly hours chart
++
++Latest approved entries
++
++
++For Supervisors
++
++List of trainees
++
++Pending logs
++
++Total hours per student
++
++
++
++---
++
++5. Report Generator
++
++Generate a downloadable OJT Logbook in:
++
++PDF
++
++or Excel
++
++
++Include:
++
++Student info
++
++Company info
++
++Daily logs
++
++Signatures (digital or image upload option)
++
++Summary of hours
++
++
++
++---
++
++6. Notifications
++
++Notify supervisor when student submits an entry
++
++Notify student when entry is approved or rejected
++
++
++
++---
++
++7. Settings
++
++Admin can:
++
++Set required total OJT hours
++
++Add/remove supervisors
++
++Edit student accounts
++
++
++
++---
++
++📌 Database Structure (Tables)
++
++Table 1: Students
++
++Student ID
++
++Name
++
++Course
++
++Email
++
++Password/Login
++
++Supervisor (linked)
++
++
++Table 2: Supervisors
++
++Supervisor ID
++
++Name
++
++Department
++
++Email
++
++Contact
++
++
++Table 3: OJT Logs
++
++Log ID
++
++Student ID (linked)
++
++Date
++
++Time In
++
++Time Out
++
++Total Hours (auto)
++
++Task Description
++
++Uploaded Proof (file)
++
++Supervisor ID
++
++Status: Pending / Approved / Rejected
++
++Supervisor Comment
++
++
++Table 4: Settings
++
++Required OJT Hours
++
++
++
++---
++
++📌 App Pages / Screens
++
++1. Login Screen
++
++Student or Supervisor login
++
++
++2. Student Home Screen
++
++Progress bar
++
++“Add New Log” button
++
++List of logs (approved, pending, rejected)
++
++
++3. Log Form
++
++Date picker
++
++Time in/out
++
++Task summary
++
++Upload proof
++
++Submit for approval
++
++
++4. Supervisor Dashboard
++
++Pending logs list
++
++“Approve / Reject” buttons
++
++Comment field
++
++
++5. Reports Screen
++
++Download printable OJT log
++
++Export to PDF or Excel
++
++
++
++---
++
++📌 Automations Needed
++
++1. Automatically calculate total hours when Time Out is entered.
++
++
++2. Recalculate cumulative hours on every new approved entry.
++
++
++3. Send notifications on submit and approval.
++
++
++4. Lock entries after approval (optional).
++
++
++5. Automatically generate weekly/monthly summaries.
++
++
++
++
++---
++
++📌 UI Style (Optional)
++
++Clean, modern interface
++
++Blue and white color scheme
++
++Simple icons for quick navigation
++
++Progress bar in primary color
++```
++
++Generate an app logo and update the app metadata title and description.
+
+# 2025-11-27 11:15:26.564227
++Code the following app
++```
++✅ FULL DETAILED PROMPT — OJT HOURS LOGGING APP
++
++Title: OJT Hours Logging & Monitoring App
++
++Goal:
++Create a mobile-friendly mini app that allows students to log daily OJT hours, monitor progress, generate reports, and get supervisor verification digitally.
++
++
++---
++
++📌 App Description
++
++Build an OJT Hours Logging App for students. The app should allow each trainee to record their date, time in, time out, tasks accomplished, and total hours. It must automatically calculate cumulative hours and display progress toward required OJT hours. Supervisors should be able to verify entries.
++
++
++---
++
++📌 Users & Access Levels
++
++1. Student / Trainee
++
++Can log hours
++
++Can edit own logs
++
++Can view total hours and progress
++
++Can generate a report
++
++
++
++2. Supervisor / HR
++
++Can view trainee logs
++
++Can approve or reject entries
++
++Can comment on logs
++
++
++
++3. Admin (optional)
++
++Manages users
++
++Sets required total OJT hours (ex: 300 hrs / 486 hrs)
++
++
++
++
++
++---
++
++📌 Required Features
++
++1. Student Hours Logging
++
++Form fields:
++
++Date
++
++Time In
++
++Time Out
++
++Auto-calculate total hours
++
++Task details / Work summary
++
++Upload proof (optional: photo, file, screenshot)
++
++Select Supervisor for verification
++
++
++Each entry should be saved under the student’s account.
++
++
++
++---
++
++2. Automatic Hours Calculation
++
++Compute (Time Out – Time In)
++
++Add to cumulative total
++
++Display:
++
++Total hours completed
++
++Hours remaining
++
++Progress bar (%)
++
++
++
++
++---
++
++3. Supervisor Approval
++
++Every log should have a status:
++
++Pending
++
++Approved
++
++Rejected
++
++
++Supervisor actions:
++
++Approve or reject entry
++
++Add comments
++
++Approve multiple entries at once (optional)
++
++
++
++---
++
++4. Dashboard
++
++For Students
++
++Total hours completed
++
++Remaining hours
++
++Weekly hours summary
++
++Monthly hours chart
++
++Latest approved entries
++
++
++For Supervisors
++
++List of trainees
++
++Pending logs
++
++Total hours per student
++
++
++
++---
++
++5. Report Generator
++
++Generate a downloadable OJT Logbook in:
++
++PDF
++
++or Excel
++
++
++Include:
++
++Student info
++
++Company info
++
++Daily logs
++
++Signatures (digital or image upload option)
++
++Summary of hours
++
++
++
++---
++
++6. Notifications
++
++Notify supervisor when student submits an entry
++
++Notify student when entry is approved or rejected
++
++
++
++---
++
++7. Settings
++
++Admin can:
++
++Set required total OJT hours
++
++Add/remove supervisors
++
++Edit student accounts
++
++
++
++---
++
++📌 Database Structure (Tables)
++
++Table 1: Students
++
++Student ID
++
++Name
++
++Course
++
++Email
++
++Password/Login
++
++Supervisor (linked)
++
++
++Table 2: Supervisors
++
++Supervisor ID
++
++Name
++
++Department
++
++Email
++
++Contact
++
++
++Table 3: OJT Logs
++
++Log ID
++
++Student ID (linked)
++
++Date
++
++Time In
++
++Time Out
++
++Total Hours (auto)
++
++Task Description
++
++Uploaded Proof (file)
++
++Supervisor ID
++
++Status: Pending / Approved / Rejected
++
++Supervisor Comment
++
++
++Table 4: Settings
++
++Required OJT Hours
++
++
++
++---
++
++📌 App Pages / Screens
++
++1. Login Screen
++
++Student or Supervisor login
++
++
++2. Student Home Screen
++
++Progress bar
++
++“Add New Log” button
++
++List of logs (approved, pending, rejected)
++
++
++3. Log Form
++
++Date picker
++
++Time in/out
++
++Task summary
++
++Upload proof
++
++Submit for approval
++
++
++4. Supervisor Dashboard
++
++Pending logs list
++
++“Approve / Reject” buttons
++
++Comment field
++
++
++5. Reports Screen
++
++Download printable OJT log
++
++Export to PDF or Excel
++
++
++
++---
++
++📌 Automations Needed
++
++1. Automatically calculate total hours when Time Out is entered.
++
++
++2. Recalculate cumulative hours on every new approved entry.
++
++
++3. Send notifications on submit and approval.
++
++
++4. Lock entries after approval (optional).
++
++
++5. Automatically generate weekly/monthly summaries.
++
++
++
++
++---
++
++📌 UI Style (Optional)
++
++Clean, modern interface
++
++Blue and white color scheme
++
++Simple icons for quick navigation
++
++Progress bar in primary color
++```
++
++Generate an app logo and update the app metadata title and description.
+
+# 2025-11-27 11:16:26.648554
++apply changes
+
+# 2025-11-27 11:16:26.649159
++apply changes
